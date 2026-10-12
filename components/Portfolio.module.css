@@ -1,0 +1,138 @@
+.portfolio {
+  margin: 0 var(--box);
+  padding: 72px 0 96px;
+  overflow: hidden;
+  border-radius: 40px;
+  background:
+    url("/assets/portfolio-card-glow.png") no-repeat right top / cover,
+    var(--black) url("/assets/portfolio-card-bg.png") no-repeat center / cover;
+  color: var(--white);
+}
+
+.title {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  font-size: clamp(30px, 3.4vw, 48px);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+  padding: 0 24px;
+}
+
+.filter {
+  min-width: 236px;
+  height: 48px;
+  padding: 0 24px;
+  border: 1px solid var(--white);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter:hover {
+  background: rgb(255 255 255 / 0.1);
+}
+
+.filter:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+.filterActive {
+  composes: filter;
+  border-color: #99cf63;
+  background: #99cf63;
+  color: var(--black);
+}
+
+.filterActive:hover {
+  background: #99cf63;
+}
+
+.slider {
+  display: flex;
+  gap: 36px;
+  margin-top: 88px;
+  padding: 0 0 8px 54px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 54px;
+  scrollbar-width: none;
+}
+
+.featured {
+  position: relative;
+  flex-shrink: 0;
+  width: 482px;
+  scroll-snap-align: start;
+}
+
+.details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 162px;
+  height: 162px;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--black);
+  font-size: 17px;
+  font-weight: 600;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.details:hover {
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+@media (max-width: 640px) {
+  .portfolio {
+    padding: 56px 0 64px;
+    border-radius: 28px;
+  }
+
+  .filters {
+    gap: 12px;
+  }
+
+  .filter {
+    min-width: 0;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .slider {
+    gap: 16px;
+    margin-top: 48px;
+    padding-left: 16px;
+    scroll-padding-left: 16px;
+  }
+
+  .featured {
+    width: 280px;
+  }
+
+  .details {
+    width: 112px;
+    height: 112px;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,63 @@
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  min-height: 235px;
+  margin: 0 var(--box);
+  padding: 40px 100px 40px 64px;
+  border-radius: 40px;
+  background:
+    url("/assets/cta-card-glow.png") no-repeat center / cover,
+    var(--black) url("/assets/cta-card-bg.png") no-repeat center / cover;
+  color: var(--white);
+}
+
+.title {
+  font-size: clamp(36px, 6.4vw, 92px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 48px;
+  height: 56px;
+  padding: 0 32px;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--black);
+  font-size: 17px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 900px) {
+  .cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 48px 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cta {
+    padding: 40px 24px;
+    border-radius: 28px;
+  }
+
+  .button {
+    gap: 24px;
+  }
+}

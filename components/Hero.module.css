@@ -1,0 +1,218 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 588px);
+  gap: 48px;
+  padding: 40px var(--page) 120px;
+}
+
+.content {
+  max-width: 600px;
+  padding-top: 8px;
+}
+
+.title {
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+
+.text {
+  max-width: 540px;
+  margin-top: 36px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--gray);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px 56px;
+  margin-top: 44px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  height: 56px;
+  padding: 0 34px 0 32px;
+  border-radius: 999px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background: #23262d;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.link {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+.brands {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  margin-top: 88px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.brands p {
+  max-width: 160px;
+}
+
+.cards {
+  position: relative;
+  display: grid;
+  grid-template-columns: 303fr 258fr;
+  gap: 24px;
+  padding-top: 85px;
+}
+
+.shape {
+  align-self: end;
+  width: 100%;
+  height: auto;
+}
+
+.badge {
+  position: absolute;
+  top: 39px;
+  left: 18.9%;
+}
+
+.stats {
+  padding: 28px 24px 34px;
+  border-radius: 20px;
+  background: #ededed;
+}
+
+.number {
+  font-size: clamp(48px, 5.6vw, 80px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.statsText {
+  margin: 18px 0 36px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #5d6066;
+}
+
+.traffic {
+  position: relative;
+  grid-column: 1 / -1;
+  min-height: 216px;
+  padding: 44px 34px;
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--black) url("/assets/hero-traffic-card-glow.png") no-repeat left top / auto 100%;
+  color: var(--white);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.label::before {
+  content: "";
+  width: 54px;
+  height: 1px;
+  background: var(--white);
+}
+
+.trafficTitle {
+  max-width: 290px;
+  margin-top: 24px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+}
+
+.bars {
+  position: absolute;
+  right: 22px;
+  bottom: 0;
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .content {
+    max-width: 720px;
+  }
+
+  .cards {
+    max-width: 588px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-bottom: 72px;
+  }
+
+  .brands {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 56px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .shape {
+    max-width: 303px;
+  }
+
+  .badge {
+    left: 111px;
+    width: 160px;
+    height: auto;
+  }
+
+  .traffic {
+    min-height: 330px;
+    padding: 32px 24px;
+  }
+
+  .trafficTitle {
+    font-size: 26px;
+  }
+
+  .bars {
+    right: 16px;
+    width: 160px;
+    height: auto;
+  }
+}

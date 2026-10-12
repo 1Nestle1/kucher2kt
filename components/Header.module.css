@@ -1,0 +1,177 @@
+.header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 30px var(--page);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  flex: 1;
+  margin: 0 24px 0 clamp(32px, 5vw, 75px);
+}
+
+.navOpen {
+  composes: nav;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 34px;
+  border: 1px solid var(--black);
+  border-radius: 999px;
+  font-size: 17px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.bell {
+  display: flex;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.bell:hover {
+  transform: translateY(-1px);
+}
+
+.burger {
+  display: none;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+
+.burgerOpen {
+  composes: burger;
+}
+
+.line {
+  position: absolute;
+  top: 22px;
+  left: 14px;
+  width: 18px;
+  height: 2px;
+  background: var(--black);
+  transition: transform 0.3s ease;
+}
+
+.line:first-child {
+  transform: translateY(-4px);
+}
+
+.line:last-child {
+  transform: translateY(4px);
+}
+
+.burgerOpen .line:first-child {
+  transform: rotate(45deg);
+}
+
+.burgerOpen .line:last-child {
+  transform: rotate(-45deg);
+}
+
+.link:focus-visible,
+.button:focus-visible,
+.bell:focus-visible,
+.burger:focus-visible {
+  outline: 2px solid var(--black);
+  outline-offset: 4px;
+}
+
+@media (max-width: 1180px) {
+  .nav {
+    gap: 22px;
+    margin-left: 32px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header {
+    justify-content: space-between;
+    padding-block: 20px;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .navOpen {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 8px var(--page) 24px;
+    background: var(--light);
+    border-bottom: 1px solid #dcdcdc;
+  }
+
+  .navOpen .link {
+    justify-content: space-between;
+    padding: 18px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #dcdcdc;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .button {
+    display: none;
+  }
+}
