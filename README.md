@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SEO agency landing page
+
+## Explore the landing page
+
+This SEO agency landing page uses Next.js, React, TypeScript, and CSS Modules. Run `npm ci` and `npm run dev`, then open http://localhost:3000. Use **View Case Study** in the hero to jump to the portfolio section and open a question in the FAQ.
+
+![Agency landing page with hero and case-study link](docs/images/readme-example.png)
 
 ## Getting Started
 
