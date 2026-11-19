@@ -1,42 +1,22 @@
 # SEO agency landing page
 
-## Explore the landing page
+## Filter agency case studies
 
-This SEO agency landing page uses Next.js, React, TypeScript, and CSS Modules. Run `npm ci` and `npm run dev`, then open http://localhost:3000. Use **View Case Study** in the hero to jump to the portfolio section and open a question in the FAQ.
+The **View Case Study** link jumps to the portfolio. Choose **UI/UX Design**, **Digital Marketing**, or **Branding** to filter the project cards. The gallery includes two UI/UX projects and one project in each of the other categories.
 
-![Agency landing page with hero and case-study link](docs/images/readme-example.png)
+![Case-study gallery with category filters and project cards](docs/images/feature.png)
 
-## Getting Started
+### Read a service FAQ
 
-First, run the development server:
+Select a question under **Resources** to expand its answer.
 
-```bash
+![FAQ section with a question expanded](docs/images/detail.png)
+
+## Run locally
+
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open http://localhost:3000. The page composition lives in `app/page.tsx`. Edit the case-study dataset in `components/Portfolio.tsx` and the questions in `components/Faq.tsx`.
